@@ -1,0 +1,37 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:        #080B0F;
+  --surface:   #0E1318;
+  --surface2:  #141B22;
+  --border:    #1E2A35;
+  --border2:   #263240;
+  --gold:      #C9A84C;
+  --gold-lt:   #E8C97A;
+  --gold-dim:  rgba(201,168,76,0.12);
+  --text:      #E8EDF2;
+  --text-mid:  #8A9BB0;
+  --text-dim:  #445566;
+  --green:     #2ECC8A;
+  --red:       #E05555;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none; z-index: 0;
+}
